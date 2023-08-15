@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <main onclick="hideLoginPanel()" th:fragment="mainfragment">
+        <div class="main-grid-container">
+            <div class="main-grid-item-highlight">
+                <div class="highlight-grid-container" th:attr="onclick=|goCikk('${highlight.news_id}')|">
+                    <div class="highlight-grid-img" th:style="'background-image:url('+${highlight.kep_utvonal}+');'">
+                    </div>
+                    <div class="highlight-grid-title" th:text="${highlight.cim}">
+                    </div>
+                    <div class="highlight-grid-firstline" th:text="${highlight.cim}">
+                    </div>
+                    <div class="news-grid-underline">
+                        <div class="news-grid-underline-category">
+                            <form th:action="${highlight.kategoria_id}" method="get">
+                                <button type="submit" th:text="${highlight.kategoria_id}"></button>
+                            </form>
+                        </div>
+                        <div class="news-grid-underline-line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-grid-item-news" th:each="news : ${news}">
+                <div class="news-grid-container" th:attr="onclick=|goCikk('${news.news_id}')|"> <!--  -->
+                    <div class="news-grid-img">
+                        <img th:src="${news.kep_utvonal}" alt="prba" title="proba" class="news-grid-img"/>
+                    </div>
+                    <div class="news-grid-title" th:text="${news.cim}">
+                    </div>
+                    <div class="news-grid-underline">
+                        <div class="news-grid-underline-category">
+                            <form th:action="${news.kategoria_id}" method="get">
+                                <button type="submit" th:text="${news.kategoria_id}"></button>
+                            </form>
+<!--                            <div th:text="${news.kategoria_id}" th:attr="onclick=|goKategoriaPanel('${news.kategoria_id}')|"></div>-->
+                        </div>
+                        <div class="news-grid-underline-line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

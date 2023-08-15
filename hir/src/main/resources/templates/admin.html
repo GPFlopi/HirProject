@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hírek</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/header.css" type="text/css"/>
+    <link rel="stylesheet" href="css/footer.css" type="text/css"/>
+    <link rel="stylesheet" href="css/admin.css" type="text/css"/>
+    <link rel="stylesheet" href="css/admin_newsadd.css" type="text/css"/>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="icon" href="assets/favicon.PNG"/>
+</head>
+<body>
+    <header th:replace="header::headerfragment">
+    </header>
+    <main>
+        <div class="box1">
+            <div class="box2">
+                <div class="box3">
+                    <a href="delete">Felhasználó törlése</a>
+                    <a href="index.html">Felhasználó jogosultságok módosítása</a>
+                    <a href="index.html">Hírek hozzáadása</a>
+                    <a href="index.html">Hír szerkesztése</a>
+                    <a href="index.html">Hír törlése</a>
+                </div>
+                <div style="width: 100%; height: 100%; background: #052024; margin: 3vw 0 0;padding: 10vw; border-radius: 1.5vw">
+                    <!--                <section></section> Ide irjatok az admin jogosultsagos dolgokat please!!!!!!!!       -->
+                    <!--hírek hozzáadása-->
+                    <section class="hozzaadas">
+                        <form th:action="@{/addNews}" method="post" class="hozzaadasform">
+                            <input type="text" name="cim" class="hozzaadastext"><br>
+<!--                            <input type="text" name="tartalom" class="hozzaadastext"><br>-->
+                            <textarea name="tartalom" class="hozzaadastext" rows="5" cols="60" ></textarea>
+                            <input type="text" name="kep_utvonal" class="hozzaadastext"><br>
+
+                            <input type="radio" name="kategoria" id="Tech" value="Tech">
+                            <label for="Tech">Tech</label><br>
+                            <input type="radio" name="kategoria" id="Sport" value="Sport">
+                            <label for="Sport">Sport</label><br>
+                            <input type="radio" name="kategoria" id="Belföld" value="Belföld">
+                            <label for="Belföld">Belföld</label><br>
+                            <input type="radio" name="kategoria" id="Külföld" value="Külföld">
+                            <label for="Külföld">Külföld</label><br>
+                            <input type="radio" name="kategoria" id="Kultúra" value="Kultúra">
+                            <label for="Kultúra">Kultúra</label><br>
+                            <input type="submit" value="Hozzáadás" class="hozzaadassubmit"/>
+                        </form>
+                    </section>
+                    <!--hírek szerkesztése-->
+                    <section class="hozzaadas">
+
+                        <form th:action="@{/updateNews/{id}(id=${news_id})}" method="post" style="color: #F6F7F3"
+                              class="hozzaadasform">
+                            <label>Szerkesztés:</label><br>
+                            <input type="text" name="cim" th:value="${news_cim}" class="hozzaadastext"><br>
+                            <input type="text" name="tartalom" th:value="${news_tartalom}" class="hozzaadastext"><br>
+                            <input type="text" name="kep_utvonal" th:value="${news_keputvonal}" class="hozzaadastext"><br>
+                            <input type="submit" value="Szerkesztés" class="hozzaadassubmit"/>
+                        </form>
+                    </section>
+                    <!--felhasználó törlése-->
+                    <section>
+                        <form th:action="@{/delete}" method="get" style="color: #F6F7F3">
+                            <label class="delete-profile">Felhasználó törlése</label><br>
+                            <table style="color: white">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Név</th>
+                                    <th>Email</th>
+                                    <th>Admin</th>
+                                    <th sec:authorize="hasAuthority('2')"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="user : ${users}">
+                                    <td th:text="${user.id}"></td>
+                                    <td th:text="${user.name}"></td>
+                                    <td th:text="${user.email}"></td>
+                                    <td th:text="${user.role}"></td>
+                                    <td sec:authorize="hasAuthority('2')">
+                                        <a th:href="@{/delete/{id}(id=${user.id})}">Delete</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="footer::footerfragment"></footer>
+</body>
+</html>

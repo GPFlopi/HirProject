@@ -1,0 +1,557 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(#333333, #070906);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    min-height: 100vh;
+}
+
+.alert{
+    width: 100%;
+    text-align: center;
+    color: #F6F7F3;
+}
+
+.alert{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 2.5vh;
+}
+
+.alert-danger{
+    background-color: indianred;
+}
+
+.alert-primary{
+    background-color: darkseagreen;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Raleway:ital,wght@1,200;1,300&family=Trirong:wght@300;500&display=swap');
+
+
+/*header{ !*a nav bar gridjert felel gyakorlatilag container*!*/
+/*    display: grid;*/
+/*    grid-auto-columns: minmax(0, 1fr);*/
+/*    grid-auto-flow: column;*/
+/*    background: #002A41;*/
+/*    width: 100vw;*/
+/*    height: 12vh;*/
+/*    grid-template-rows: 6vh 6vh;*/
+/*}*/
+
+/*!*innen a nav bar menujenek a formazasa*!*/
+
+/*nav > ul{*/
+/*    display: grid;*/
+/*    list-style-type: none;*/
+/*    grid-template-columns: auto auto auto auto auto;*/
+/*    text-align: center;*/
+/*    padding: 0;*/
+/*}*/
+
+/*nav li a{*/
+/*    text-underline: none;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*nav li a div{*/
+/*    height: 10%;*/
+/*    border-radius: 10rem 10rem 10rem 10rem;*/
+/*    background: #C3A995;*/
+/*    margin: auto;*/
+/*    width: 0;*/
+/*    transition: all 0.1s;*/
+/*}*/
+
+/*nav li:hover a div{*/
+/*    height: 10%;*/
+/*    border-radius: 10rem 10rem 10rem 10rem;*/
+/*    background: #C3A995;*/
+/*    transition: all 0.1s;*/
+/*    width: 70%;*/
+/*}*/
+
+/*li > a{*/
+/*    font-family: 'Cormorant Garamond';*/
+/*    font-style: normal;*/
+/*    font-weight: 700;*/
+/*    font-size: 2.5vh;*/
+/*    color: #F6F7F3;*/
+/*}*/
+
+/*!*Nav bar menu vege*!*/
+/*!*Itt a nav bar gridjenek elemei vannak definialva ezek az elemek containerei*!*/
+
+/*.header-grid-item1{*/
+/*    grid-column: 1;*/
+/*    grid-row: 1 / span 2;*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: left;*/
+/*    margin-left: 3.5%;*/
+/*}*/
+
+/*.header-grid-item2{*/
+/*    grid-column: 2;*/
+/*    grid-row: 2;*/
+/*    height: 100%;*/
+/*}*/
+
+/*.header-grid-item3{*/
+/*    grid-column: 3;*/
+/*    grid-row: 1;*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: right;*/
+/*    margin: 0.5% 1%;*/
+/*}*/
+/*!* login lenyilasa*!*/
+/*.loginbtn{*/
+/*    grid-column: 3;*/
+/*    grid-row: 2;*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: right;*/
+/*    margin: 0 1.2%;*/
+/*    width: 10%;*/
+/*    margin-left: 85%;*/
+/*}*/
+/*.loginbtn a{*/
+/*    text-decoration: none;*/
+/*    font-size: 20px;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    position: relative;*/
+/*}*/
+/*.loginbtn form{*/
+/*    width: 225px;*/
+/*    height: 500px;*/
+/*    border-radius: 40px;*/
+/*    margin-top: 450px;*/
+/*    margin-right: 20px;*/
+
+/*    background: linear-gradient(*/
+/*        to bottom,*/
+/*        #002A41 0%,*/
+/*        #002A41 75%,*/
+/*        #00526E 100%*/
+/*    );*/
+/*    text-align: left;*/
+/*    color:white;*/
+/*    font-weight: normal;*/
+/*    display: none;*/
+/*}*/
+
+/*.loginbtn form h1{*/
+/*    height: 40px;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    font-weight: normal;*/
+/*}*/
+/*.loginbtn form .inputok{*/
+/*    padding: 7px 0;*/
+/*    padding-right: 50px;*/
+/*    margin: 6px;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.submit{*/
+/*    margin-top: 25px;*/
+/*    margin-bottom: 40px;*/
+/*    background: transparent;*/
+/*    border-color: transparent;*/
+/*    width: 100%;*/
+/*    color: white;*/
+/*    font-size: large;*/
+/*    font-weight: bold;*/
+/*    border-radius: 20px;*/
+/*}*/
+/*#bejgomb{*/
+/*    margin-bottom: 150px;*/
+/*}*/
+/*.loginbtn form h2{*/
+/*    margin-top: 15px;*/
+/*    text-align: center;*/
+/*    font-weight: normal;*/
+/*}*/
+/*.loginbtn form h3{*/
+/*    margin-top: 15px;*/
+/*    text-align: center;*/
+/*    font-weight: normal;*/
+/*    font-size: small;*/
+/*}*/
+/*.loginbtn:hover #bejvisible {*/
+/*    display: table;*/
+/*}*/
+/*.loginbtn:hover #regvisible {*/
+/*    display: table;*/
+/*}*/
+
+/*#kijelentkezes{*/
+/*    display: block;*/
+/*    width: 225px;*/
+/*    height: 50px;*/
+/*    border-radius: 5px;*/
+/*    margin-top: 15px;*/
+/*    margin-right: 20px;*/
+
+/*    background: linear-gradient(*/
+/*            to bottom,*/
+/*            #002A41 0%,*/
+/*            #002A41 75%,*/
+/*            #00526E 100%*/
+/*    );*/
+/*    text-align: left;*/
+/*    color:white;*/
+/*    font-weight: normal;*/
+/*}*/
+
+/*.hozzaadas{*/
+/*    align-content: center;*/
+/*    background: #002A41;*/
+/*    padding: 10px;*/
+/*    border-radius: 20px;*/
+/*    height: max-content;*/
+/*    width: max-content;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+/*.hozzaadasform{*/
+/*    align-self: center;*/
+/*    width: max-content;*/
+/*    color: #F6F7F3;*/
+/*    background: #00526E;*/
+/*    padding: 10px;*/
+/*    border-radius: 20px;*/
+/*}*/
+/*.hozzaadastext{*/
+/*    background: #C3A995;*/
+/*    margin-bottom: 10px;*/
+/*    border-radius: 5px;*/
+/*    width: 200px;*/
+/*}*/
+/*.hozzaadassubmit{*/
+/*    margin-top: 10px;*/
+/*    background: #C3A995;*/
+/*    border-radius: 20px;*/
+/*    border-color: #C3A995;*/
+/*    width: 200px;*/
+/*}*/
+
+/*!*Nav bar jobb oladalanak a formazasa , profilkep, es kereso valamint a logo merete*!*/
+
+
+/*a{*/
+/*    height: 70%;*/
+/*}*/
+
+/*.profilp{*/
+/*    height: 60%;*/
+/*}*/
+
+/*.header-grid-item3 div{*/
+/*    background: #00526E;*/
+/*    border-radius: 1rem 1rem 1rem 1rem;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    padding: 0.25rem 0.25rem;*/
+/*}*/
+
+/*.search-bar{*/
+/*    width: 100%;*/
+/*    background: #00425c;*/
+/*    border-radius: 1rem 1rem 1rem 1rem;*/
+/*    padding: 0.3rem 0.7rem;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.search-bar input{*/
+/*    background: transparent;*/
+/*    flex: 1;*/
+/*    border: 0;*/
+/*    outline: none;*/
+/*    width: 92%;*/
+/*    font-size: 1.2rem;*/
+/*    color: #F6F7F3;*/
+/*}*/
+
+/*.search-bar button img{*/
+/*    width: 1.5rem;*/
+/*}*/
+
+/*.search-bar button{*/
+/*    border: 0;*/
+/*    background: #00425c;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!*Nav jobb oldalanak vege*!*/
+
+
+/*body{*/
+/*    margin: 0;*/
+/*    box-sizing: border-box;*/
+/*    width: 100vw;*/
+/*}*/
+/*img{*/
+/*    max-width: 100%;*/
+/*}*/
+
+/**{*/
+/*    box-sizing: border-box;*/
+
+/*}*/
+/*.r{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+/*main{*/
+/*    margin: auto;*/
+/*    position: center;*/
+/*    width: 100vw;*/
+/*    background-color: #052024;*/
+/*    padding: 0 40vh;*/
+/*}*/
+
+/*.fobox{*/
+/*    width: 80vh;*/
+/*    !*border: 0 solid black;*!*/
+/*    padding: 2vh 0 6vh 0;*/
+/*    margin: auto;*/
+/*    display: block;*/
+/*}*/
+
+/*.fobox h2{*/
+/*    color: #F6F7F3;*/
+/*    font-style: italic;*/
+/*}*/
+
+/*.fobox p{*/
+/*    color: #F6F7F3;*/
+/*}*/
+
+/*.r h2{*/
+/*    color: #F6F7F3;*/
+/*    font-style: italic;*/
+/*}*/
+/*.box{*/
+/*    !*width: 320px;*!*/
+/*    width: 35vh;*/
+/*    border: 0;*/
+/*    padding: 0 3vh 4vh 0;*/
+/*    margin: auto;*/
+/*    display: block;*/
+
+/*}*/
+/*.button{*/
+/*    background-color: #002A41;*/
+/*    border: none;*/
+/*    color: white;*/
+/*    padding: 15px 32px;*/
+/*    text-align: center;*/
+/*    display: inline-block;*/
+/*    font-size: 16px;*/
+/*    margin: 0 0;*/
+/*    cursor: default;*/
+/*    float: right;*/
+/*    text-decoration: none;*/
+/*    border-radius: 12px 12px 0 0;*/
+
+/*}*/
+
+/*footer{*/
+/*    margin: 0 0 ;*/
+/*    font-size: 20px;*/
+/*    padding: 110px;*/
+/*    background: #002A41;*/
+/*}*/
+
+/*footer .footerleft{*/
+/*    float: left;*/
+/*}*/
+
+/*footer .footerright{*/
+/*    float: right;*/
+/*}*/
+
+/*.footerleft a{*/
+/*    color: #F6F7F3;*/
+/*}*/
+
+/*.footerright a{*/
+/*    color: #F6F7F3;*/
+/*}*/
+
+.cikkeleje{
+    text-align: center;
+    color: #F6F7F3;
+    padding: 30px 0 70px 0;
+}
+
+
+.cikkeleje h2{
+    font-style: italic;
+}
+
+.cikkbutton{
+    background-color: #00526E;
+    border: 0;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+    cursor: auto;
+    float: right;
+    text-decoration: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.cikkkepe{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    /*border-bottom: 10px solid #00526E;*/
+    /*margin: 0;*/
+    /*display:block;*/
+}
+.cikktartalma {
+    text-align: center;
+    color: #F6F7F3;
+    padding: 50px 0 50px 0;
+    position: relative;
+}
+
+.cikktartalma p{
+    padding-bottom: 50px;
+}
+
+#border:before{
+    content: "";
+    position: absolute;
+    left: 50vh;
+    top: 0;
+    height: 15px;
+    width: 10%;
+    border-top: 5px solid #00526E;
+}
+
+#border:after{
+    content: "";
+    position: absolute;
+    left: 50vh;
+    bottom: 0;
+    height: 15px;
+    width: 10%;
+    border-bottom: 5px solid #00526E;
+}
+
+.szerzoneve{
+    color: #F6F7F3;
+    text-align: right;
+    padding: 0 0 80px 0;
+    font-style: italic;
+}
+
+
+
+/*!*profilcss*!*/
+
+/*#profilnev{*/
+/*    text-decoration: underline;*/
+/*    padding-bottom: 40px;*/
+
+/*}*/
+
+/*#profilemail{*/
+/*    text-decoration: underline;*/
+/*    padding-bottom: 40px;*/
+
+
+/*}*/
+
+/*#profiljelszo{*/
+/*    text-decoration: underline;*/
+/*    padding-bottom: 40px;*/
+/*}*/
+
+/*#profil h2{*/
+/*    position: center;*/
+/*    color: #F6F7F3;*/
+/*    padding: 50px 0 50px 0;*/
+/*    margin: auto;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#profil{*/
+/*    color: #F6F7F3;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#profilbutton{*/
+/*    background-color: #00526E;*/
+/*    border: 0;*/
+/*    color: white;*/
+/*    padding: 8px 32px;*/
+/*    font-size: 16px;*/
+/*    border-radius: 12px 12px;*/
+/*    margin-bottom: 80px;*/
+
+/*}*/
+
+/*!* Itt fogom az admint customulni *!*/
+/*.box1 {*/
+/*    padding: 3vw;*/
+/*    background: #052024;*/
+/*}*/
+/*.box2 {*/
+/*    padding: 3vw;*/
+/*    border-radius: 1.5vw;*/
+/*    background: #002A41;*/
+/*}*/
+/*.box3{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+/*main a:link, a:visited {*/
+/*    background-color: #00425c;*/
+/*    color: white;*/
+/*    padding: 14px 25px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    border-radius: 3vw;*/
+/*    font-size: 2vh;*/
+/*    margin: 0 2vh;*/
+/*}*/
+
+/*main a:hover, a:active {*/
+/*    transition: all 0.2s;*/
+/*    background-color: #00526E;*/
+/*}*/
+
+/*!*felhasználó törlése tábla*!*/
+/*table {*/
+/*    border-radius: 1.5vw;*/
+/*    background-color: #00425c;*/
+/*    vertical-align: center;*/
+/*}*/
+
+/*table, th, td {*/
+/*    border: 1px solid white;*/
+/*    padding: 12px;*/
+/*}*/
+
+/*th, td {*/
+/*    background: #C3A995;*/
+/*    text-align: center;*/
+/*}*/

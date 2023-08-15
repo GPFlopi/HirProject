@@ -1,0 +1,30 @@
+.hozzaadas{
+    align-content: center;
+    background: #002A41;
+    padding: 10px;
+    border-radius: 20px;
+    height: max-content;
+    width: max-content;
+    margin-bottom: 15px;
+}
+.hozzaadasform{
+    align-self: center;
+    width: max-content;
+    color: #F6F7F3;
+    background: #00526E;
+    padding: 10px;
+    border-radius: 20px;
+}
+.hozzaadastext{
+    background: #C3A995;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+.hozzaadassubmit{
+    margin-top: 10px;
+    background: #C3A995;
+    border-radius: 20px;
+    border-color: #C3A995;
+    width: 200px;
+}

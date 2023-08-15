@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Hírek</title>
+  <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/index.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/header.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/footer.css" type="text/css"/>
+  <link rel="icon" href="assets/favicon.PNG"/>
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <header th:replace="header::headerfragment"></header>
+<main>
+  <div class="cikkeleje">
+    <div class="cikkkepe" th:style="'background-image:url('+${news_keputvonal}+');'"></div>
+<!--    <img class="cikkkepe" th:src="${news_keputvonal}" width="100%">-->
+    <button class="cikkbutton" th:text="${news_kategoriaid}"></button>
+    <h2 th:text="${news_cim}"></h2>
+    <p>A Székesfehérvári Egyházmegyei Karitász plébániai karitászönkéntesei számára tartottak egyházmegyei karitászgyűlést október 22-én. Több mint százan gyűltek össze a karitásznapon, hogy közösen ünnepeljenek és egymásból merítsenek erőt a szeretetszolgálathoz. </p>
+  </div>
+  <div class="cikktartalma" id="border">
+    <p th:text="${news_tartalom}"></p>
+  </div>
+  <div class="szerzoneve">
+    <p>Szerző neve</p>
+  </div>
+  <div>
+    <form sec:authorize="hasAuthority('1')" th:action="@{/editNews/{id}(id=${news_id})}" method="post">
+      <input type="submit" value="Szerkesztés">
+    </form>
+  </div>
+</main>
+  <footer th:replace="footer::footerfragment"></footer>
+</body>
+</html>

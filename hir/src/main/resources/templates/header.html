@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+<body>
+    <header th:fragment="headerfragment">
+        <div class="header-grid-item1">
+            <a href="/" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 1100.42 1098.24"><defs><style>.cls-1{fill:#c3a995;}</style></defs><g id="Réteg_2" data-name="Réteg 2"><g id="Bg"><path class="cls-1" d="M183.35,731.35A183.35,183.35,0,1,0,366.7,914.7,183.3,183.3,0,0,0,183.35,731.35Zm0,275A91.68,91.68,0,1,1,275,914.7,91.64,91.64,0,0,1,183.35,1006.37Z"/><path class="cls-1" d="M738.91,358c-.23-.35-.86-1-1.09-1.3-17.76-16.85-45.9-16.12-63.43,1.41a45.78,45.78,0,0,0-3.67,60.62,35.84,35.84,0,0,0,3.44,3.9,160.9,160.9,0,1,1-248.21,0c1.26-1.26,2.41-2.64,3.55-4a45.81,45.81,0,0,0-67.84-61.2l-.46.46A251.68,251.68,0,0,0,298,525.08c0,139.23,112.87,252.1,252.11,252.1s252.1-112.87,252.1-252.1A250.77,250.77,0,0,0,738.91,358Z"/><path class="cls-1" d="M721.2,215.71a45.69,45.69,0,0,1-64.2.53l-.33-.34-59.86-59.71v370h-91v-370l-59.76,59.69A45.76,45.76,0,0,1,380.53,152l0,0,.83-.83L516.13,16.5c.46-.57,1-1,1.49-1.6l3.09-3.1c.58-.45,1-1,1.61-1.48a45.76,45.76,0,0,1,57.75-.12.42.42,0,0,0,.23.12l6.19,6.18a.38.38,0,0,0,.12.23L615.94,46,721.36,151.2l.83.83,0,0A45.6,45.6,0,0,1,721.2,215.71Z"/><path class="cls-1" d="M917.07,731.54a183.35,183.35,0,1,0,183.35,183.35A183.29,183.29,0,0,0,917.07,731.54Zm0,275a91.68,91.68,0,1,1,91.67-91.67A91.65,91.65,0,0,1,917.07,1006.56Z"/><path class="cls-1" d="M596.81,526.22a45.5,45.5,0,1,1-91,0Z"/><path class="cls-1" d="M850.87,750.71,773.4,828.18l-11.34-11.35.68-1.14c3.67-5.5,3.56-10-.23-13.64l-63.83-63.83c-3.66-3.78-8.13-3.89-13.63-.23l-1.15.69-1.49-1.49,77.47-77.47,2.06,2.07c-2.29,4.58-1.72,8.36,1.61,11.57l70.82,70.94c3.32,3.2,6.64,3.2,11.57,1.49Z"/><path class="cls-1" d="M249.49,750.54,327,828l11.34-11.35-.69-1.14c-3.66-5.5-3.55-10,.23-13.64l63.83-63.83c3.67-3.78,8.14-3.89,13.64-.23l1.15.69L418,737l-77.47-77.47-2.06,2.07c2.29,4.58,1.71,8.36-1.61,11.57L266,744.12c-3.32,3.21-6.64,3.21-11.57,1.49Z"/></g></g></svg>
+            </a>
+        </div>
+        <div class="header-grid-item2">
+            <nav> <!--Nav bar menuje-->
+                <ul>
+                    <li class="nav-grid-item"><a href="Tech">Tech<div class="csik"></div></a></li>
+                    <li class="nav-grid-item"><a href="Sport">Sport<div class="csik"></div></a></li>
+                    <li class="nav-grid-item"><a href="Belföld">Belföld<div class="csik"></div></a></li>
+                    <li class="nav-grid-item"><a href="Külföld">Külföld<div class="csik"></div></a></li>
+                    <li class="nav-grid-item"><a href="Kultúra">Kultúra<div class="csik"></div></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-grid-item3">
+            <div>
+                <form action="" class="search-bar"> <!--Search bar-->
+                    <input type="text">
+                    <button type="submit"><img src="assets/Eszkoz_8.svg" alt="kereses ikon"></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="header-grid-item4">
+<!--            <img src="assets/Eszkoz_9.svg" class="profilp" sec:authorize="hasAuthority('1') || hasAuthority('2')" onclick="goAdminPanel()">-->
+            <svg xmlns="http://www.w3.org/2000/svg" class="profilp" sec:authorize="hasAuthority('1') || hasAuthority('2')" onclick="goAdminPanel()" viewBox="0 0 36.94 36.97"><defs><style>.cls-7{fill:#f6f7f3;}</style></defs><g id="Réteg_2" data-name="Réteg 2"><g id="Bg"><path class="cls-7" d="M36.86,20c-.12.81-.19,1.64-.36,2.45A18.46,18.46,0,1,1,15.28.3a19.43,19.43,0,0,1,2-.28c.44,0,.83,0,1.3,0s.9,0,1.31,0a27,27,0,0,1,2.81.47A18.43,18.43,0,0,1,36.64,15.3c.12.68.19,1.36.28,2,0,.41,0,.85,0,1.31S36.9,19.54,36.86,20ZM29.54,30.37a16.19,16.19,0,0,0,4.56-16.5,16.31,16.31,0,0,0-31.2-.25A16.13,16.13,0,0,0,7.38,30.37,11.61,11.61,0,0,1,14,22.91a8,8,0,1,1,9.72-12.77,7.65,7.65,0,0,1,2.69,5.26,8,8,0,0,1-3.57,7.5A11.67,11.67,0,0,1,29.54,30.37ZM18,34.79a16.76,16.76,0,0,0,9.31-2.63.51.51,0,0,0,.26-.64,9.36,9.36,0,0,0-18.27,0,.47.47,0,0,0,.24.59A16,16,0,0,0,18,34.79Zm.44-24.49a5.87,5.87,0,1,0,5.86,5.87A5.86,5.86,0,0,0,18.46,10.3Z"/></g></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="loginbtn" onclick="showLoginPanel()" sec:authorize="!isAuthenticated()" viewBox="0 0 36.94 36.97"><defs><style>.cls-2{fill:#f6f7f3;}</style></defs><g id="Réteg_2" data-name="Réteg 2"><g id="Bg"><path class="cls-2" d="M36.86,20c-.12.81-.19,1.64-.36,2.45A18.46,18.46,0,1,1,15.28.3a19.43,19.43,0,0,1,2-.28c.44,0,.83,0,1.3,0s.9,0,1.31,0a27,27,0,0,1,2.81.47A18.43,18.43,0,0,1,36.64,15.3c.12.68.19,1.36.28,2,0,.41,0,.85,0,1.31S36.9,19.54,36.86,20ZM29.54,30.37a16.19,16.19,0,0,0,4.56-16.5,16.31,16.31,0,0,0-31.2-.25A16.13,16.13,0,0,0,7.38,30.37,11.61,11.61,0,0,1,14,22.91a8,8,0,1,1,9.72-12.77,7.65,7.65,0,0,1,2.69,5.26,8,8,0,0,1-3.57,7.5A11.67,11.67,0,0,1,29.54,30.37ZM18,34.79a16.76,16.76,0,0,0,9.31-2.63.51.51,0,0,0,.26-.64,9.36,9.36,0,0,0-18.27,0,.47.47,0,0,0,.24.59A16,16,0,0,0,18,34.79Zm.44-24.49a5.87,5.87,0,1,0,5.86,5.87A5.86,5.86,0,0,0,18.46,10.3Z"/></g></g></svg>
+
+
+            <form sec:authorize="!isAuthenticated()" action="#" th:action="@{/loginuser}" method="post" id="loginPanel">
+                <div class="login-grid-container">
+                    <div class="login-grid-item-title">
+                        Bejelentkezés
+                    </div>
+                    <div class="login-grid-item-underline">
+                    </div>
+                    <div class="login-grid-item-label">
+                        Felhasználónév
+                    </div>
+                    <div class="login-grid-item-input">
+                        <input type="text" th:name="username" autocomplete="off">
+                    </div>
+                    <div class="login-grid-item-label">
+                        Jelszó
+                    </div>
+                    <div class="login-grid-item-input">
+                        <input type="password" th:name="password" autocomplete="off">
+                    </div>
+                    <div class="login-grid-item-remember">
+                        <div class="login-grid-item-remember-box"></div>
+                        <div class="login-grid-item-remember-text">
+                            Adatok megjegyzése
+                        </div>
+                    </div>
+                    <div class="login-grid-item-login">
+                        <input type="submit" value="Bejelentkezés" class="submit" />
+                    </div>
+                    <div class="login-grid-item-underline login_btn-underline">
+                    </div>
+                    <div class="login-grid-item-register_btn" onclick="switchPanel('registerPanel')">
+                        Még nem csatlakoztál hozzánk? Tedd meg most!
+                    </div>
+                </div>
+            </form>
+
+            <form sec:authorize="!isAuthenticated()" action="#" th:action="@{/registeruser}" method="post" id="registerPanel">
+                <div class="login-grid-container">
+                    <div class="login-grid-item-title">
+                        Regisztráció
+                    </div>
+                    <div class="login-grid-item-underline">
+                    </div>
+                    <div class="login-grid-item-label">
+                        Felhasználónév
+                    </div>
+                    <div class="login-grid-item-input">
+                        <input type="text" th:name="username" autocomplete="off">
+                    </div>
+                    <div class="login-grid-item-label">
+                        Email
+                    </div>
+                    <div class="login-grid-item-input">
+                        <input type="email" th:name="email" autocomplete="off">
+                    </div>
+                    <div class="login-grid-item-label">
+                        Jelszó
+                    </div>
+                    <div class="login-grid-item-input">
+                        <input type="password" th:name="password" autocomplete="off">
+                    </div>
+                    <div class="login-grid-item-label">
+                        Jelszó ismét
+                    </div>
+                    <div class="login-grid-item-input">
+                        <input type="password" th:name="password2" autocomplete="off">
+                    </div>
+
+                    <div class="login-grid-item-login">
+                        <input type="submit" value="Regisztráció" class="submit" />
+                    </div>
+                    <div class="login-grid-item-underline login_btn-underline">
+                    </div>
+                    <div class="login-grid-item-register_btn" onclick="switchPanel('loginPanel')">
+                        Már van fiókod? Jelentkezz be!
+                    </div>
+                </div>
+            </form>
+            <form sec:authorize="isAuthenticated()" th:action="@{/logout}" id="kijelentkezes" method="post">
+                <input type="submit" value="Kijelentkezés" class="submit"/>
+            </form>
+        </div>
+    </header>
+</body>
+</html>

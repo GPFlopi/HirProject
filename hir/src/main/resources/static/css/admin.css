@@ -1,0 +1,13 @@
+.box1 {
+    padding: 3vw;
+}
+.box2 {
+    padding: 3vw;
+    border-radius: 1.5vw;
+    background: #002A41;
+}
+.box3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

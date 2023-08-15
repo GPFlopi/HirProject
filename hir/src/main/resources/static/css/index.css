@@ -1,0 +1,122 @@
+/*MAIN GRID CONTAINER*/
+
+.main-grid-container{
+    display: grid;
+    grid-template-columns: 18% 18% 18%;
+    grid-auto-rows: minmax(365px, auto);
+    width: 100%;
+    justify-content: center;
+    grid-gap: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: #F6F7F3;
+}
+
+.main-grid-item-highlight{
+    grid-row: 1;
+    grid-column: 1 / 4;
+}
+
+.main-grid-item-news{
+
+}
+
+/*-------------------------------------*/
+
+/*NEWS GRID CONTAINER*/
+
+.news-grid-container{
+    display: grid;
+    grid-auto-rows: 23vh minmax(10vh, auto) 3vh;
+}
+
+.news-grid-container:hover{
+    cursor: pointer;
+}
+
+.news-grid-img{
+    width: 100%;
+    height: 100%;
+    /*background-image: url("../assets/proba.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+}
+
+.news-grid-title{
+    margin-top: 1vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2.5vh;
+}
+
+.news-grid-underline{
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+
+.news-grid-underline-category{
+    justify-self: end;
+}
+
+.news-grid-underline-category button{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    border-style: none;
+    border-radius: 0.9vh 0.9vh 0 0;
+    height: 100%;
+    width: 6vw;
+    background-color: #00526E;
+    color: #F6F7F3;
+    font-size: 2vh;
+    letter-spacing: 0.1vw;
+    text-align: center;
+}
+
+.news-grid-underline-category button:hover{
+    cursor: pointer;
+    color: #C3A995;
+}
+
+.news-grid-underline-line{
+    background-color: #00526E;
+}
+
+/*-------------------------------------*/
+
+/*HIGHLIGHT CONTAINER*/
+
+.highlight-grid-container{
+    display: grid;
+    grid-auto-rows: 23vh 5vh minmax(5vh, auto)  3vh;
+}
+
+.highlight-grid-container:hover{
+    cursor: pointer;
+}
+
+.highlight-grid-img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.highlight-grid-img img{
+    clip-path: circle(10%);
+}
+
+.highlight-grid-title{
+    font-size: 3.5vh;
+    margin-top: 1vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.highlight-grid-firstline{
+    font-family: 'Trirong', serif;
+    font-weight: 300;
+    font-size: 2vh;
+    margin-top: 2vh;
+}

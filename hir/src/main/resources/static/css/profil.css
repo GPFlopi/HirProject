@@ -1,0 +1,39 @@
+/*profilcss*/
+
+#profilnev {
+    text-decoration: underline;
+    padding-bottom: 40px;
+}
+
+#profilemail{
+    text-decoration: underline;
+    padding-bottom: 40px;
+}
+
+#profiljelszo{
+    text-decoration: underline;
+    padding-bottom: 40px;
+}
+
+#profil h2{
+    position: center;
+    color: #F6F7F3;
+    padding: 50px 0 50px 0;
+    margin: auto;
+    text-align: center;
+}
+
+#profil{
+    color: #F6F7F3;
+    text-align: center;
+}
+
+#profilbutton{
+    background-color: #00526E;
+    border: 0;
+    color: white;
+    padding: 8px 32px;
+    font-size: 16px;
+    border-radius: 12px 12px;
+    margin-bottom: 80px;
+}

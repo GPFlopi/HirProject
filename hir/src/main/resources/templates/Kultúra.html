@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="hu" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <meta charset="UTF-8">
+  <title>Hírek</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="css/index.css" type="text/css"/>
+  <link rel="stylesheet" href="css/header.css" type="text/css"/>
+  <link rel="stylesheet" href="css/footer.css" type="text/css"/>
+  <script type="text/javascript" src="js/script.js"></script>
+  <link rel="icon" href="css/favicon.PNG"/>
+</head>
+<body>
+  <header th:replace="header::headerfragment"></header>
+  <main th:replace="main::mainfragment"></main>
+  <footer th:replace="footer::footerfragment"></footer>
+</body>
+</html>
